@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace TaskJunior3._3
 {
@@ -11,38 +11,34 @@ namespace TaskJunior3._3
             int firstValueRandom = 0;
             int finishValueRandom = 10;
             int numberOfLines = 30;
-            int firstIndex = 0;
-            int secondIndex = 1;
-            int penultimateIndex = 28;
-            int lastIndex = 29;
 
-            int[] array = new int [numberOfLines];
-            Console.WriteLine(array.Length + " - кол-во элементов в самом массиве.\n\nМассив:\n");
+            int[] numbers = new int [numberOfLines];
+            Console.WriteLine(numbers.Length + " - кол-во элементов в самом массиве.\n\nМассив:\n");
 
-            for (int i = 0; i < array.Length; i++)
+            for (int i = 0; i < numbers.Length; i++)
             {
-                array[i] = random.Next(firstValueRandom, finishValueRandom);
-                Console.Write(array[i] + " ");
+                numbers[i] = random.Next(firstValueRandom, finishValueRandom);
+                Console.Write(numbers[i] + " ");
             }
 
             Console.WriteLine("\n\nЛокальные максимумы:\n");
 
-            if (array[firstIndex] > array[secondIndex])
+            if (numbers[0] > numbers[1])
             {
-                Console.Write(array[firstIndex] + " ");
+                Console.Write(numbers[0] + " ");
             }
 
-            for (int i = 1; i < array.Length - 1; i++)
+            for (int i = 1; i < numbers.Length - 1; i++)
             {
-                if (array[i] > array[i - 1] && array[i] > array[i + 1])
+                if (numbers[i] > numbers[i - 1] && numbers[i] > numbers[i + 1])
                 {
-                    Console.Write(array[i] + " ");
+                    Console.Write(numbers[i] + " ");
                 }
             }
 
-            if (array[lastIndex] > array[penultimateIndex])
+            if (numbers[^1] > numbers[^2])
             {
-                Console.Write(array[lastIndex] + " ");
+                Console.Write(numbers[^1] + " ");
             }
         }
     }
