@@ -10,9 +10,10 @@ namespace TaskJunior3._3
 
             int firstValueRandom = 0;
             int finishValueRandom = 10;
-            int numberOfLines = 30;
+            int numberOfNumbers = 30;
+            int lastIndex = 1;
 
-            int[] numbers = new int [numberOfLines];
+            int[] numbers = new int [numberOfNumbers];
             Console.WriteLine(numbers.Length + " - кол-во элементов в самом массиве.\n\nМассив:\n");
 
             for (int i = 0; i < numbers.Length; i++)
@@ -36,9 +37,9 @@ namespace TaskJunior3._3
                 }
             }
 
-            if (numbers[^1] > numbers[^2])
+            if (numbers[^lastIndex] > numbers[^lastIndex] - 1)
             {
-                Console.Write(numbers[^1] + " ");
+                Console.Write(numbers[^lastIndex] + " ");
             }
         }
     }
